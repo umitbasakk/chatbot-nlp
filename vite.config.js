@@ -8,7 +8,7 @@ export default defineConfig({
     global: 'window',
   },
   server: {
-    allowedHosts: ['izuchat.online'],
+    allowedHosts: ['izuchat.online','www.izuchat.online'],
     host:'0.0.0.0',
     port:5173,
     strictPort: true,
