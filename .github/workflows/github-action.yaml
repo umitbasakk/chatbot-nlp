@@ -13,5 +13,5 @@ jobs:
       
       - name: Deploy
         run: |
-          docker compose -f docker-compose.yaml -p nlp down --rmi all
-          docker compose -f docker-compose.yaml -p nlp up -d
+          sudo docker compose -f docker-compose.yaml -p nlp down --rmi all
+          sudo docker compose -f docker-compose.yaml -p nlp up -d
