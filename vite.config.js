@@ -8,8 +8,9 @@ export default defineConfig({
     global: 'window',
   },
   server: {
-    host:true,
+    host:'0.0.0.0',
     port:5173,
+    strictPort: true,
     proxy: {
       '/api': {
         target: 'https://api.openpipe.ai',  // API isteklerinin yönlendirilmesi gereken hedef URL
