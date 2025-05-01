@@ -4,7 +4,7 @@ services:
     build:
       context: ./
       dockerfile: dockerfile
-    ports:
+    expose:
       - "5173"
   nginx:
     container_name: nginx
