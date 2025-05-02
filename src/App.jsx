@@ -22,10 +22,14 @@ function App() {
   const showSwal = () =>{
     withReactContent(Swal).fire({
       title: <i>!!!</i>,
-      input: 'Are you sure?',
-      preConfirm: () => {
-        handleDelete();
-      },
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: "Save",
+      denyButtonText: `Cancel`
+    }).then((result) =>{
+      if(result.isConfirmed){
+        Swal.fire("Saved!", "", "success");
+      }
     })
   }
 
