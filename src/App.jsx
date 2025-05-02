@@ -22,6 +22,7 @@ function App() {
   const showSwal = () =>{
     withReactContent(Swal).fire({
       title: <i>!!!</i>,
+      text:"Are you sure you want to delete the chat?",
       showCancelButton: true,
       confirmButtonText: "Yes",
     }).then((result) =>{
