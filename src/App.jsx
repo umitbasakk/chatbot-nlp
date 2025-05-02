@@ -24,11 +24,11 @@ function App() {
       title: <i>!!!</i>,
       showDenyButton: true,
       showCancelButton: true,
-      confirmButtonText: "Save",
-      denyButtonText: `Cancel`
+      confirmButtonText: "Yes",
     }).then((result) =>{
       if(result.isConfirmed){
         Swal.fire("Saved!", "", "success");
+        handleDelete();
       }
     })
   }
