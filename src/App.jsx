@@ -24,6 +24,7 @@ function App() {
       title: <i>!!!</i>,
       text:"Are you sure you want to delete the chat?",
       showCancelButton: true,
+      icon: "question",
       confirmButtonText: "Yes",
     }).then((result) =>{
       if(result.isConfirmed){
