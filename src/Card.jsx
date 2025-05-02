@@ -1,4 +1,4 @@
-import user from "./assets/user.jpg";
+import user from "./assets/question-mark.png";
 import izuLogo from "./assets/izu.png";
 import React from 'react';
 
