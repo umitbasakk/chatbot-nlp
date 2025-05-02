@@ -2,6 +2,8 @@ import { useRef, useState } from 'react';
 import './App.css';
 import Card from './Card'; 
 import izuLogo from "./assets/izu.png";
+import withReactContent from 'sweetalert2-react-content';
+import Swal from 'sweetalert2';
 
 function App() {
   const [messages, setMessages] = useState([
@@ -16,6 +18,16 @@ function App() {
       sendPrompt();
     }
   };
+
+  const showSwal = () =>{
+    withReactContent(Swal).fire({
+      title: <i>!!!</i>,
+      input: 'Are you sure?',
+      preConfirm: () => {
+        handleDelete();
+      },
+    })
+  }
 
   function handleDelete(){
     setMessages((prevMessages) => [
@@ -115,7 +127,7 @@ function App() {
             <span onClick={sendPrompt} className="material-symbols-rounded">send</span>
           </div>
           <div className="typing-controls">
-            <span onClick={handleDelete} className="material-symbols-rounded">delete</span>
+            <span onClick={showSwal} className="material-symbols-rounded">delete</span>
           </div>
         </div>
       </div>
