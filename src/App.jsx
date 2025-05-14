@@ -67,7 +67,7 @@ function App() {
           messages: [
             {
               role: 'user',
-              content: text, // Kullanıcı mesajı
+              content: text, // Kullanıcı mesaj
             },
           ],
           store: true, // Veriyi saklama
